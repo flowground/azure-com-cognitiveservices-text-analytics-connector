@@ -1,0 +1,48 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "documents": [
+                    {
+                        "id": "1",
+                        "language": "en",
+                        "text": "Hello world. This is some input text that I love."
+                    },
+                    {
+                        "id": "2",
+                        "language": "fr",
+                        "text": "Bonjour tout le monde"
+                    },
+                    {
+                        "id": "3",
+                        "language": "es",
+                        "text": "La carretera estaba atascada. Había mucho tráfico el día de ayer."
+                    }
+                ]
+            },
+            "properties": {
+                "documents": {
+                    "items": {
+                        "properties": {
+                            "id": {
+                                "description": "Unique, non-empty document identifier.",
+                                "type": "string"
+                            },
+                            "language": {
+                                "description": "This is the 2 letter ISO 639-1 representation of a language. For example, use \"en\" for English; \"es\" for Spanish etc.,",
+                                "type": "string"
+                            },
+                            "text": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        }
+    }
+}
